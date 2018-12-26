@@ -1,0 +1,9 @@
+node_modules/
+.next/
+yarn-error.log
+node_modules
+npm-debug.log
+appDebug.log
+__admin__.js
+config/development.js
+.env
