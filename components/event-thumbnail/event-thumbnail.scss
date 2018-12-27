@@ -1,0 +1,30 @@
+.event-thumbnail {
+  margin-bottom: 50px;
+  img {
+    width: 100%;
+  }
+
+  .date {
+    padding: 5px 0 0 30px;
+    background: url("/static/images/icons/calender.svg") no-repeat center left;
+    background-size: 23px;
+    @include desktopSmall {
+      margin: 10px 0;
+    }
+  }
+
+  h2 {
+    margin-top: 7px;
+    margin-bottom: 0;
+    @include desktopSmall {
+      margin-top: 18px;
+    }
+  }
+
+  .location {
+    text-align: right;
+    padding: 5px 30px 0 5px;
+    background: url("/static/images/icons/location.svg") no-repeat center right;
+    background-size: 23px;
+  }
+}

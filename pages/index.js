@@ -4,6 +4,7 @@ import Head from "next/head";
 import fetch from "isomorphic-unfetch";
 import Navbar from "../components/navbar/navbar";
 import Banner from "../components/banner/banner";
+import EventSlider from "../components/event-slider/event-slider";
 
 const home = props => {
   return (
@@ -14,6 +15,7 @@ const home = props => {
       </Head>
       <Navbar />
       <Banner />
+      <EventSlider />
     </section>
   );
 };

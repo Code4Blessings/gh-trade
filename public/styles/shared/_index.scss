@@ -1,7 +1,9 @@
 .align-body {
+  width: 92%;
+  margin: 0 auto;
   @include desktopSmall {
-    width: calc(100% - 140px);
-    margin-left: 140px;
+    width: calc(90% - 140px);
+    margin-left: calc(10% + 140px);
   }
 }
 
@@ -10,5 +12,23 @@
   margin: 0 auto;
   @include desktopSmall {
     margin-left: 8%;
+  }
+}
+
+.red-link {
+  padding: 20px 50px;
+  background-image: url("/static/images/icons/white-arrow.svg");
+  background-color: $color-red;
+  background-repeat: no-repeat;
+  color: white;
+  background-size: 20px;
+  font-weight: 900;
+  @include desktopSmall {
+    padding: 23px 100px 23px 60px;
+    font-size: $font-size-xxlarge;
+    transition: 0.3s;
+    &:hover {
+      background-color: $color-dark-gray;
+    }
   }
 }

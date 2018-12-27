@@ -28,7 +28,7 @@ const banner = props => {
           alt="Emekliyim mutluyum"
         />
         <Link href="#">
-          <a className="banner-button">Etkinliklerimiz</a>
+          <a className="banner-button red-link">Etkinliklerimiz</a>
         </Link>
       </div>
       <div className="banner-content">

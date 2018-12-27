@@ -10,19 +10,12 @@
     }
 
     a.banner-button {
-      padding: 20px 50px;
-      background: url("/static/images/icons/white-arrow.svg") $color-red
-        no-repeat 184px 21px;
-      color: white;
-      background-size: 20px;
+      background-position: 184px 21px;
       position: absolute;
       bottom: -10px;
       right: 0;
-      font-weight: 900;
       @include desktopSmall {
-        padding: 23px 100px 23px 60px;
         bottom: -26px;
-        font-size: $font-size-xxlarge;
         background-position: 240px 27px;
       }
     }
