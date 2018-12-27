@@ -1,0 +1,40 @@
+// Font size as rem
+@mixin fontSize($size) {
+  font-size: calculateRem($size);
+}
+
+// Line height as rem
+@mixin lineHeight($size) {
+  line-height: calculateRem($size);
+}
+
+// Break points
+@mixin tablet {
+  @media (min-width: 767px) {
+    @content;
+  }
+}
+
+@mixin desktopSmall {
+  @media (min-width: 992px) {
+    @content;
+  }
+}
+
+@mixin desktopMedium {
+  @media (min-width: 1310px) {
+    @content;
+  }
+}
+
+@mixin desktopLarge {
+  @media (min-width: 1420px) {
+    @content;
+  }
+}
+
+@mixin desktopMega {
+  @media (min-width: 1920px) {
+    @content;
+  }
+}

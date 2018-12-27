@@ -1,0 +1,69 @@
+.banner {
+  @include desktopSmall {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  &-image {
+    position: relative;
+    @include desktopSmall {
+      width: 50%;
+    }
+
+    a.banner-button {
+      padding: 20px 50px;
+      background: url("/static/images/icons/white-arrow.svg") $color-red
+        no-repeat 184px 21px;
+      color: white;
+      background-size: 20px;
+      position: absolute;
+      bottom: -10px;
+      right: 0;
+      font-weight: 900;
+      @include desktopSmall {
+        padding: 23px 100px 23px 60px;
+        bottom: -26px;
+        font-size: $font-size-xxlarge;
+        background-position: 240px 27px;
+      }
+    }
+  }
+
+  &-content {
+    width: 92%;
+    margin: 0 auto;
+    @include desktopSmall {
+      margin-top: calc(100vw / 35);
+      width: 50%;
+      padding-left: 7%;
+      padding-right: 7%;
+    }
+    h1 {
+      color: $color-red;
+      margin-top: 30px;
+      @include desktopMedium {
+        font-size: 2vw;
+        line-height: 2vw;
+        margin-top: calc(100vw / 20);
+      }
+    }
+    p {
+      margin-top: 14px;
+      line-height: calculateRem(22px);
+      margin-bottom: calc(100vw / 50);
+      @include desktopMedium {
+        font-size: 1.1vw;
+        line-height: 1.5vw;
+        margin-top: calc(100vw / 40);
+      }
+    }
+
+    &-link {
+      display: block;
+      color: $color-red;
+      width: 214px;
+      background: blue;
+      background: url("/static/images/icons/red-arrow.svg") no-repeat center 3px;
+      font-size: $font-size-xlarge;
+    }
+  }
+}

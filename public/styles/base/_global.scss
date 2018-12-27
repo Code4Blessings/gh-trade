@@ -1,0 +1,47 @@
+* {
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+}
+
+body {
+  width: 100%;
+  overflow-x: hidden;
+  font-family: $font-family-body;
+  color: $color-dark-gray;
+}
+
+a {
+  color: inherit;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+pre {
+  white-space: pre-wrap;
+}
+
+button {
+  cursor: pointer;
+}
+
+.clearfix:after {
+  content: " ";
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
+}
+
+h1 {
+  font-family: $font-family-title;
+  font-size: $font-size-mega;
+  line-height: calculateRem(25px);
+  @include desktopSmall {
+    font-size: calculateRem(30px);
+    line-height: calculateRem(28px);
+  }
+  @include desktopMedium {
+    font-size: calculateRem(39px);
+    line-height: calculateRem(40px);
+  }
+}

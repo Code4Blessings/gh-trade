@@ -1,0 +1,14 @@
+.align-body {
+  @include desktopSmall {
+    width: calc(100% - 140px);
+    margin-left: 140px;
+  }
+}
+
+.main-container-width {
+  width: 92%;
+  margin: 0 auto;
+  @include desktopSmall {
+    margin-left: 8%;
+  }
+}

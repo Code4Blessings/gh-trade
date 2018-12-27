@@ -1,0 +1,18 @@
+// Base
+@import "base/_normalize.scss";
+@import "base/_functions.scss";
+@import "base/_variables.scss";
+@import "base/_mixins.scss";
+@import "base/_global.scss";
+
+// shared styles
+@import "shared/_index.scss";
+
+// Components
+@import "../../components/navbar/navbar.scss";
+@import "../../components/banner/banner.scss";
+@import "../../components/footer/footer.scss";
+
+// Shared styles  *keep at the bottom (overides)
+@import "shared/_js-classes.scss";
+@import "shared/_overides.scss";

@@ -1,0 +1,17 @@
+// Colors
+$color-dark-gray: #434c58;
+$color-red: #ff2b45;
+// Typography
+$font-family-body: "Arial", sans-serif;
+$font-family-title: "Itim", cursive;
+
+$font-size-tiny: calculateRem(10.3px);
+$font-size-small: calculateRem(12px);
+$font-size-medium: calculateRem(14px);
+$font-size-large: calculateRem(16px);
+$font-size-xlarge: calculateRem(18px);
+$font-size-xxlarge: calculateRem(20px);
+$font-size-mega: calculateRem(24px);
+
+// animation
+$transition: cubic-bezier(0.165, 0.84, 0.44, 1);

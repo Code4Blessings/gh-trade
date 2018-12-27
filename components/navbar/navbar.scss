@@ -1,0 +1,57 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: 0 auto;
+  @include desktopSmall {
+    position: fixed;
+    flex-direction: column;
+    justify-content: flex-start;
+    left: 0;
+    top: 0;
+    width: 140px;
+    height: 100%;
+    box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.2);
+  }
+  &-logo {
+    @include desktopSmall {
+      width: 100%;
+      margin-top: 10vh;
+    }
+    img {
+      width: 120px;
+      @include desktopSmall {
+        width: 120px;
+        margin: 0 auto;
+        display: block;
+      }
+    }
+  }
+
+  &-burger {
+    width: 50px;
+    margin-top: 30px;
+    @include desktopSmall {
+      margin: 22vh auto 0;
+    }
+    span {
+      height: 2px;
+      display: block;
+      background: $color-red;
+      margin-bottom: 8px;
+    }
+
+    .top {
+      width: 100%;
+    }
+
+    .middle {
+      width: 74%;
+      margin-left: 26%;
+    }
+
+    .bottom {
+      width: 100%;
+    }
+  }
+}
