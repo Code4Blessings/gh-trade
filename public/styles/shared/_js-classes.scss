@@ -1,0 +1,22 @@
+.slide-navigation-menu {
+  transform: translateX(0) !important;
+  opacity: 1 !important;
+  @include desktopSmall {
+    left: 0px !important;
+  }
+}
+
+.no-scroll {
+  @media (max-width: 780px) {
+    width: 100% !important;
+    height: 100% !important;
+    overflow: hidden !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+  }
+}
+
+.rotate-nav {
+  transform: rotate(-23deg) !important;
+}

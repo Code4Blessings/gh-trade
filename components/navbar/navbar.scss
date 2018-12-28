@@ -13,7 +13,86 @@
     height: 100%;
     box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.2);
   }
+
+  #menu {
+    width: 100%;
+    height: 100%;
+    background-color: $color-dark-gray;
+    color: white;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    transform: translateX(-101vw);
+    opacity: 0;
+    transition: 0.4s $transition;
+    @include desktopSmall {
+      box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.2);
+      max-width: 250px;
+      height: calc(100vh - 27vh + 120px);
+      top: calc(27vh + 120px);
+    }
+
+    ul {
+      padding-top: 8vh;
+      padding-left: 0;
+      @include desktopSmall {
+        padding-top: 0;
+      }
+      li {
+        list-style: none;
+        a {
+          font-family: $font-family-title;
+          font-size: $font-size-mega;
+          display: block;
+          padding: 10px 0 10px 53px;
+          margin-bottom: 2.2vh;
+          background-position: 15px 8px;
+          background-repeat: no-repeat;
+          &:hover {
+            color: $color-red;
+          }
+        }
+        .member {
+          background-size: 32px;
+          background-image: url("/static/images/icons/member.svg");
+        }
+
+        .login {
+          background-size: 26px;
+          background-image: url("/static/images/icons/login.svg");
+        }
+
+        .activities {
+          background-size: 29px;
+          background-image: url("/static/images/icons/activities.svg");
+        }
+
+        .blogs {
+          background-size: 27px;
+          background-image: url("/static/images/icons/blogs.svg");
+        }
+
+        .authors {
+          background-size: 32px;
+          background-image: url("/static/images/icons/writers.svg");
+        }
+
+        .contact {
+          background-size: 33px;
+          background-image: url("/static/images/icons/contact.svg");
+        }
+
+        .about {
+          background-size: 33px;
+          background-image: url("/static/images/icons/about.svg");
+        }
+      }
+    }
+  }
+
   &-logo {
+    display: block;
     @include desktopSmall {
       width: 100%;
       margin-top: 10vh;
@@ -31,27 +110,37 @@
   &-burger {
     width: 50px;
     margin-top: 30px;
+    position: relative;
+    z-index: 3;
     @include desktopSmall {
-      margin: 22vh auto 0;
+      margin: 17vh auto 0;
+      cursor: pointer;
     }
     span {
-      height: 2px;
       display: block;
-      background: $color-red;
-      margin-bottom: 8px;
+      margin-bottom: 7px;
     }
 
     .top {
       width: 100%;
+      height: 2px;
+      display: block;
+      background: $color-red;
     }
 
-    .middle {
-      width: 74%;
-      margin-left: 26%;
+    #middle {
+      transition: 0.3s $transition;
+      color: $color-red;
+      width: 100%;
+      text-align: center;
+      font-weight: 900;
+      font-size: $font-size-xlarge;
     }
 
     .bottom {
       width: 100%;
+      height: 2px;
+      background: $color-red;
     }
   }
 }
