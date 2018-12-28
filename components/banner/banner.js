@@ -3,21 +3,6 @@ import Link from "next/link";
 import "../../public/styles/Main.scss";
 import { Picture } from "react-responsive-picture";
 
-const bannerImages = [
-  {
-    srcSet: "/static/images/banner-small.jpg",
-    media: "(max-width: 455px)"
-  },
-  {
-    srcSet: "/static/images/banner-medium.jpg",
-    media: "(max-width: 680px)"
-  },
-  {
-    srcSet: "/static/images/banner-large.jpg",
-    type: "image/jpg"
-  }
-];
-
 const banner = props => {
   return (
     <section className="banner align-body">
@@ -50,3 +35,18 @@ const banner = props => {
 };
 
 export default banner;
+
+var bannerImages = [
+  {
+    srcSet: "/static/images/banner-small.jpg",
+    media: "(max-width: 455px)"
+  },
+  {
+    srcSet: "/static/images/banner-medium.jpg",
+    media: "(max-width: 680px)"
+  },
+  {
+    srcSet: "/static/images/banner-large.jpg",
+    type: "image/jpg"
+  }
+];

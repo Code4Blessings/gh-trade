@@ -8,6 +8,20 @@
   line-height: calculateRem($size);
 }
 
+//calender icon
+@mixin calender() {
+  padding: 5px 0 0 30px;
+  background: url("/static/images/icons/calender.svg") no-repeat center left;
+  background-size: 23px;
+}
+
+//author icon
+@mixin author() {
+  padding: 5px 0 0 30px;
+  background: url("/static/images/icons/author.svg") no-repeat center left;
+  background-size: 23px;
+}
+
 // Break points
 @mixin tablet {
   @media (min-width: 767px) {
