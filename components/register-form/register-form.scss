@@ -1,0 +1,19 @@
+.register-form {
+  padding: 10vh 0 10vh;
+  form {
+    @include desktopSmall {
+      max-width: 560px;
+      margin-top: 80px;
+    }
+    label {
+      margin-top: 27px;
+      margin-bottom: 4px;
+    }
+
+    button {
+      width: 230px;
+      background-position: 160px center;
+      margin: 30px auto;
+    }
+  }
+}

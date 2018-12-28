@@ -12,7 +12,7 @@ const banner = props => {
           style={{ width: "100%" }}
           alt="Emekliyim mutluyum"
         />
-        <Link href="#">
+        <Link href="/events">
           <a className="banner-button red-link">Etkinliklerimiz</a>
         </Link>
       </div>
@@ -26,7 +26,7 @@ const banner = props => {
           gorursun. Beraber yapa yapa bitirelim 2 haftaya en gec! Sonra aklimda
           super fikirler var reklam icin!
         </p>
-        <Link href="#">
+        <Link href="/about-us">
           <a className="banner-content-link">Biz Kimiz</a>
         </Link>
       </div>

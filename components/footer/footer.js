@@ -21,7 +21,7 @@ const footer = props => {
           <a href="#">
             <img src={twitter} alt="twitter" className="twitter" />
           </a>
-          <a href="instagram">
+          <a href="#">
             <img src={instagram} alt="instagram" className="instagram" />
           </a>
         </div>
@@ -29,28 +29,28 @@ const footer = props => {
       <div className="footer-links">
         <div className="footer-links-cell">
           <h5>Biz Kimiz</h5>
-          <Link href="#">
+          <Link href="/about-us">
             <a>Bizim ile alakali</a>
           </Link>
-          <Link href="#">
-            <a>Ekibimiz</a>
+          <Link href="/authors">
+            <a>Destekcilerimiz</a>
           </Link>
         </div>
         <div className="footer-links-cell">
           <h5>Yazilarimiz</h5>
-          <Link href="#">
+          <Link href="/blogs">
             <a>Makaleler</a>
           </Link>
-          <Link href="#">
+          <Link href="/authors">
             <a>Yazarlarimiz</a>
           </Link>
         </div>
         <div className="footer-links-cell">
           <h5>Etkinlinler</h5>
-          <Link href="#">
+          <Link href="/events">
             <a>Etkinlik listemiz</a>
           </Link>
-          <Link href="#">
+          <Link href="/events">
             <a>Yakin zamandaki etkinlikler</a>
           </Link>
         </div>

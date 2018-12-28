@@ -32,3 +32,42 @@
     }
   }
 }
+
+.form-default {
+  * {
+    display: block;
+    width: 100%;
+  }
+  label {
+    font-weight: 900;
+  }
+
+  input {
+    border: none;
+    border-bottom: 1px solid $color-red;
+    border-left: 1px solid $color-red;
+    height: 40px;
+    text-indent: 5px;
+  }
+
+  select {
+    height: 40px;
+    background: white;
+    border: 1px solid $color-red;
+  }
+
+  button {
+    border: none;
+    background-color: $color-red;
+    background-repeat: no-repeat;
+    height: 45px;
+    color: white;
+    font-weight: 900;
+    background-image: url("/static/images/icons/white-arrow.svg");
+    text-transform: uppercase;
+
+    &:hover {
+      background-color: $color-dark-gray;
+    }
+  }
+}

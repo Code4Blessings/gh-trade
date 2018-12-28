@@ -10,9 +10,12 @@ const blogSlider = props => {
       <div className="blog-slider__cell">
         {insertBlogThumbnails(props.blogs)}
       </div>
-      <Link href="#">
-        <a className="red-link">Butun Makaleler</a>
-      </Link>
+
+      {!props.eventPage && (
+        <Link href="/blogs">
+          <a className="red-link">Butun Makaleler</a>
+        </Link>
+      )}
     </section>
   );
 };

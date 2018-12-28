@@ -33,13 +33,15 @@ const dummyEvents = [
 const eventSlider = props => {
   return (
     <section className="eventslider align-body">
-      <h1>Yakında olan etkinlikler</h1>
+      <h1>{props.eventPage ? "Etkinlikler" : "Yakında olan etkinlikler"}</h1>
       <div className="eventslider__frame">
         {insertThumbnailEvents(dummyEvents)}
       </div>
-      <Link href="#">
-        <a className="red-link">Butun Etkinliklerimiz</a>
-      </Link>
+      {!props.eventPage && (
+        <Link href="/events">
+          <a className="red-link">Butun Etkinliklerimiz</a>
+        </Link>
+      )}
     </section>
   );
 };

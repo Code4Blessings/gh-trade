@@ -21,37 +21,37 @@ const navbar = props => {
       <section id="menu">
         <ul>
           <li>
-            <Link href="#">
+            <Link href="/register">
               <a className="member">Uye ol</a>
             </Link>
           </li>
           <li>
-            <Link href="#">
+            <Link href="/login">
               <a className="login">Giris yap</a>
             </Link>
           </li>
           <li>
-            <Link href="#">
+            <Link href="/events">
               <a className="activities">Etkinlikler</a>
             </Link>
           </li>
           <li>
-            <Link href="#">
+            <Link href="/blogs">
               <a className="blogs">Makaleler</a>
             </Link>
           </li>
           <li>
-            <Link href="#">
+            <Link href="/authors">
               <a className="authors">Yazarlarimiz</a>
             </Link>
           </li>
           <li>
-            <Link href="#">
+            <Link href="/contact-us">
               <a className="contact">Bize ulasin</a>
             </Link>
           </li>
           <li>
-            <Link href="#">
+            <Link href="about-us">
               <a className="about">Hakkimizda</a>
             </Link>
           </li>

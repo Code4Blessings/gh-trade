@@ -1,0 +1,16 @@
+.about-us {
+  padding: 10vh 0;
+  @include desktopSmall {
+    padding: 13vh 0 20vh;
+  }
+
+  h2 {
+    margin-top: 30px;
+    margin-bottom: 0;
+  }
+
+  p {
+    margin-top: 7px;
+    line-height: $font-size-mega;
+  }
+}

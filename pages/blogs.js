@@ -3,10 +3,7 @@ import Link from "next/link";
 import Head from "next/head";
 import fetch from "isomorphic-unfetch";
 import Navbar from "../components/navbar/navbar";
-import Banner from "../components/banner/banner";
-import EventSlider from "../components/event-slider/event-slider";
 import BlogSlider from "../components/blog-slider/blog-slider";
-import ContactUsWidget from "../components/contact-us-widget/contact-us-widget";
 import Footer from "../components/footer/footer";
 
 const home = props => {
@@ -17,10 +14,11 @@ const home = props => {
         <meta name="description" content="Emekliyim mutluyum aciklamasi" />
       </Head>
       <Navbar />
-      <Banner />
-      <EventSlider />
-      <BlogSlider blogs={dummyBlogs} />
-      <ContactUsWidget />
+      <BlogSlider eventPage={true} blogs={dummyBlogs} />
+      <br />
+      <br />
+      <br />
+      <br />
       <Footer />
     </section>
   );
