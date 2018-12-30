@@ -1,5 +1,4 @@
-- add admin panel
-- add admin blogs
+- add thumbnail events near blog page
 - add admin events
 - add admin enquires
 - add admin blog suggestions (profile page users should be able suggest)

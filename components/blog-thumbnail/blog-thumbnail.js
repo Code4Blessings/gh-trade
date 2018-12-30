@@ -7,10 +7,10 @@ const blogThumbnail = props => {
   const imgPath = `/static/images/blog-images/${props.blog.image_directory}/${
     props.blog.blog_thumbnail_img
   }`;
-
+  const blogLink = `/blog/${props.blog.blog_url}`;
   return (
     <article className="blog-thumbnail">
-      <Link href={props.blog.blog_url}>
+      <Link href={blogLink}>
         <a>
           <img src={imgPath} alt="Emekliyim mutluyum emelilik makalesi" />
           <h2>{props.blog.seo_title}</h2>

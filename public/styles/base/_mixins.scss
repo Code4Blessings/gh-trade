@@ -16,6 +16,12 @@
   font-size: $font-size-medium;
 }
 
+@mixin redTick {
+  background: url("/static/images/icons/tick.svg") no-repeat left 10px;
+  background-size: 19px;
+  padding: 7px 0 7px 28px;
+}
+
 //author icon
 @mixin author() {
   padding: 5px 0 5px 27px;

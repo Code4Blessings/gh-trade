@@ -4,9 +4,15 @@ import BlogThumbnail from "../blog-thumbnail/blog-thumbnail";
 import "../../public/styles/Main.scss";
 
 const blogSlider = props => {
+  const removeMarginTopForLoadedBlogs = props.noTitle
+    ? { "margin-top": "0px" }
+    : {};
   return (
-    <section className="blog-slider align-body">
-      <h1>Uyelerimizin Yazdigi Makaleler</h1>
+    <section
+      className="blog-slider align-body"
+      style={removeMarginTopForLoadedBlogs}
+    >
+      {!props.noTitle && <h1>Uyelerimizin Yazdigi Makaleler</h1>}
       <div className="blog-slider__cell">
         {insertBlogThumbnails(props.blogs)}
       </div>

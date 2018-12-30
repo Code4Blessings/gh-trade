@@ -149,16 +149,7 @@ BlogSchema.statics.createNewAndAddToBlogList = async function(request) {
 };
 
 BlogSchema.statics.fetchThumbnails = function(recordQty, skipQty, sort) {
-  return Blog.find(
-    {},
-    {
-      seo_title: true,
-      seo_description: true,
-      blog_url: true,
-      blog_thumbnail_img: true,
-      image_directory: true
-    }
-  )
+  return Blog.find()
     .skip(skipQty)
     .limit(recordQty)
     .sort(sort);

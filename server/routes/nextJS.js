@@ -20,6 +20,7 @@ class NextRoutes {
     this.server.get("/events", this.renderEvents.bind(this));
     this.server.get("/blogs", this.renderBlogs.bind(this));
     this.server.get("/authors", this.renderAuthors.bind(this));
+    this.server.get("/blog/:id", this.renderBlog.bind(this));
     this.server.get("/contact-us", this.renderContactus.bind(this));
     this.server.get("/about-us", this.renderAboutus.bind(this));
     this.server.all("*", this.handleAll.bind(this));
@@ -58,6 +59,11 @@ class NextRoutes {
 
   renderAboutus(req, res) {
     this.app.render(req, res, "/about-us");
+  }
+
+  renderBlog(req, res) {
+    const queryParams = { id: req.params.id };
+    this.app.render(req, res, "/blog", queryParams);
   }
 
   handleAll(req, res) {

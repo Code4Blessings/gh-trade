@@ -83,3 +83,11 @@
   width: auto;
   line-height: $font-size-mega;
 }
+
+// blogs & events
+.load-more-button {
+  display: block !important;
+  background-image: url("/static/images/icons/down-arrow-white.svg");
+  background-size: 27px;
+  background-position: 270px center !important;
+}
