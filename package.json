@@ -38,7 +38,7 @@
     "helmet": "3.14.0",
     "husky": "1.1.2",
     "identity-obj-proxy": "3.0.0",
-    "isomorphic-unfetch": "3.0.0",
+    "isomorphic-unfetch": "^3.0.0",
     "json-loader": "0.5.7",
     "lint-staged": "7.3.0",
     "mongoose": "5.3.10",

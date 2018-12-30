@@ -71,3 +71,15 @@
     }
   }
 }
+
+.alert {
+  font-weight: 900;
+  font-size: $font-size-xlarge;
+  padding: 10px 15px;
+  border: 4px solid $color-red;
+  background: $color-dark-gray;
+  color: #fff;
+  display: inline-block;
+  width: auto;
+  line-height: $font-size-mega;
+}

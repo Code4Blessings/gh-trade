@@ -16,7 +16,7 @@ class NextRoutes {
   registerRoutes() {
     this.server.get("/", this.renderHome.bind(this));
     this.server.get("/register", this.renderRegister.bind(this));
-    this.server.get("/login", this.renderLogin.bind(this));
+    this.server.get("/login", this.renderLoginOrProfile.bind(this));
     this.server.get("/events", this.renderEvents.bind(this));
     this.server.get("/blogs", this.renderBlogs.bind(this));
     this.server.get("/authors", this.renderAuthors.bind(this));
@@ -36,8 +36,8 @@ class NextRoutes {
     this.app.render(req, res, "/register");
   }
 
-  renderLogin(req, res) {
-    this.app.render(req, res, "/login");
+  renderLoginOrProfile(req, res) {
+    this.app.render(req, res, "/login_and_profile");
   }
 
   renderEvents(req, res) {

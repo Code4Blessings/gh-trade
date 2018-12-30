@@ -1,0 +1,19 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    link(rel='stylesheet', href='/static/admin/styles.css')
+  body
+    .alert=alert
+    .console.login
+      .adds
+        a(href="/admin/add-event") Add Event
+        a(href="/admin/add-blog") Add Blog
+      .removes
+        a(href="/admin/remove-blog") Remove Blog
+        a(href="/admin/remove-event") Remove Event
+      .views
+        a(href="/admin/view-applications") View Blog Successions
+        a(href="/admin/view-applications") View Event Successions
+        a(href="/admin/view-payments") View Payments
+        a(href="/admin/view-enquires") View Enquires

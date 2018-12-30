@@ -21,7 +21,7 @@ class Doc extends Document {
             type="image/x-icon"
             href="/static/images/icons/logo-uneven.png"
           />
-          <script src="/static/scripts/axios.js" async defer />
+          <script src="/static/vendors/axios.js" async defer />
         </Head>
         <body>
           <Main />

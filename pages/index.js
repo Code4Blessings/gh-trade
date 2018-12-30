@@ -19,11 +19,29 @@ const home = props => {
       <Navbar />
       <Banner />
       <EventSlider />
-      <BlogSlider blogs={dummyBlogs} />
+      <BlogSlider blogs={props.recentBlogs} />
       <ContactUsWidget />
       <Footer />
     </section>
   );
+};
+
+home.getInitialProps = async () => {
+  const basePath =
+    process.env.NODE_ENV === "development"
+      ? "http://localhost:3000"
+      : "http://localhost:3000"; // On deployment replace with the domain
+
+  function assignEmptyArr(data) {
+    return data.length ? data : [];
+  }
+
+  const _recent_blogs = await fetch(`${basePath}/iso/fetch/homepage/recents`);
+  const recent_blogs = await _recent_blogs.json();
+
+  return {
+    recentBlogs: recent_blogs.length ? recent_blogs : []
+  };
 };
 
 export default home;

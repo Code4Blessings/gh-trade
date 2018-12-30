@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 const bcrypt = require("bcrypt-nodejs");
 const schema = mongoose.Schema;
 
-const userSchema = new schema({
+const adminSchema = new schema({
   email: {
     type: String,
     unique: true,
@@ -17,25 +17,24 @@ const userSchema = new schema({
   }
 });
 
-userSchema.methods.hashPassword = function(password) {
+adminSchema.methods.hashPassword = function(password) {
   return bcrypt.hashSync(password, bcrypt.genSaltSync(3));
 };
 
-userSchema.methods.comparePassword = function(password, hash) {
+adminSchema.methods.comparePassword = function(password, hash) {
   return bcrypt.compareSync(password, hash);
 };
 
-userSchema.statics.authenticate = function(email, password, cb) {
+adminSchema.statics.authenticate = function(email, password, cb) {
   this.findOne({ email: email }, function(e, user) {
     if (e || !user) {
       return cb(null);
     }
-    const valid = user.comparePassword(password, user.password);
-    if (valid) {
+    if (user) {
       return cb(user);
     }
     return cb(null);
   });
 };
 
-module.exports = mongoose.model("users", userSchema, "users");
+module.exports = mongoose.model("admins", adminSchema, "admins");

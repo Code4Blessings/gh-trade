@@ -3,10 +3,10 @@ import Link from "next/link";
 import Head from "next/head";
 import fetch from "isomorphic-unfetch";
 import Navbar from "../components/navbar/navbar";
-import LoginForm from "../components/login-form/login-form";
+import LoginAndProfile from "../components/login-and-profile/login-and-profile";
 import Footer from "../components/footer/footer";
 
-const login = props => {
+const loginOrProfile = props => {
   return (
     <section>
       <Head>
@@ -14,10 +14,17 @@ const login = props => {
         <meta name="description" content="Emekliyim mutluyum aciklamasi" />
       </Head>
       <Navbar />
-      <LoginForm />
+      <LoginAndProfile authenticated={props.authenticated} />
       <Footer />
     </section>
   );
 };
 
-export default login;
+loginOrProfile.getInitialProps = async function({ req }) {
+  const authenticated = req.session && req.session.userID ? true : false;
+  return {
+    authenticated
+  };
+};
+
+export default loginOrProfile;

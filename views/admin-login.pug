@@ -1,0 +1,12 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    link(rel='stylesheet', href='/static/admin/styles.css')
+  body
+    .alert=alert
+    .login
+      form.login__form(method="post" action="/auth/admin/login")
+        input.login__email(type="email" placeholder=" Email" required name="email" maxlength="90" minlength="10")
+        input.login__password(type="password" placeholder=" Password" required name="password" minlength="8" maxlength="120")
+        button.login__button(type="submit") LOGIN
