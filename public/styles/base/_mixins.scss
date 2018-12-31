@@ -15,6 +15,44 @@
   background-size: 23px;
   font-size: $font-size-medium;
 }
+//location icon
+@mixin location() {
+  padding: 17px 0 5px 33px;
+  background: url("/static/images/icons/location.svg") no-repeat center left;
+  background-size: 28px;
+  font-size: $font-size-medium;
+}
+
+//clock icon
+@mixin clock() {
+  text-align: right;
+  padding: 13px 28px 0 0;
+  background: url("/static/images/icons/clock.svg") no-repeat 99% center;
+  background-size: 22px;
+  font-size: $font-size-medium;
+}
+
+// peope joined icon
+@mixin people() {
+  text-align: right;
+  padding: 19px 42px 5px 5px;
+  background: url("/static/images/icons/people.svg") no-repeat right 2px;
+  background-size: 36px;
+  font-size: $font-size-mega;
+  line-height: 0;
+  color: $color-red;
+  font-weight: 900;
+}
+
+@mixin hoverGray() {
+  @include desktopSmall {
+    transition: 0.2s;
+    padding: 5px 5px 18px;
+    &:hover {
+      background: #dbdbdb;
+    }
+  }
+}
 
 @mixin redTick {
   background: url("/static/images/icons/tick.svg") no-repeat left 10px;

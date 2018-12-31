@@ -1,5 +1,7 @@
 .blog-thumbnail {
   margin-bottom: 40px;
+  @include hoverGray();
+
   @include desktopSmall {
     width: 48%;
     margin-bottom: 50px;

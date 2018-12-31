@@ -1,0 +1,49 @@
+.event-page {
+  padding: 5vh 0 3vh;
+  @include desktopSmall {
+    padding: 11vh 0 5vh;
+  }
+  h1 {
+    text-transform: uppercase;
+    line-height: calculateRem(29px);
+  }
+
+  h2 {
+    font-size: $font-size-xlarge;
+    line-height: $font-size-mega;
+  }
+
+  img {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .red-link {
+    display: inline-block;
+    width: auto !important;
+  }
+
+  pre {
+    line-height: calculateRem(26px);
+    font-family: $font-family-body;
+    pre {
+      margin-bottom: 0;
+    }
+
+    a {
+      color: $color-red;
+      text-decoration: underline;
+      font-weight: 900;
+    }
+
+    ul {
+      padding: 0;
+      list-style-position: inside;
+      list-style: none;
+      li {
+        margin-bottom: 8px;
+        @include redTick();
+      }
+    }
+  }
+}

@@ -1,5 +1,7 @@
+- post a decent event and style it
+- remove city from register page and add it to the profile page
+- single blog page, right side pug 3 events
 - add thumbnail events near blog page
-- add admin events
 - add admin enquires
 - add admin blog suggestions (profile page users should be able suggest)
 - add admin event suggestions (profile page users should be able suggest)
@@ -9,7 +11,10 @@
 - implement user profile page, suggest blog
 
 - talk to that guy for social media posts and writing article for 1000lira per month
-- when user logged in, replace 'login' with 'profile' on the menu bar
 - contact us form backend connection
 - social media accounts
 - at the end add google recaptche
+
+
+
+OTTOSUNS, ERROR ON BROWSER CONSOLE WHEN CLICKED ON CURRENCY CHANGE

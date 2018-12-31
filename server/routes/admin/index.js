@@ -17,6 +17,7 @@ const crypto = require("crypto");
 const helpers = require("../../../helpers/server/index.js");
 const logger = require("../../../logger");
 const Blog = require("../../../db/models/blogs.js");
+const Event = require("../../../db/models/events.js");
 
 class AdminRouter {
   constructor(router) {
@@ -30,10 +31,19 @@ class AdminRouter {
   registerRoutes() {
     this.router.get("/console", [this.requiresLogin, this.renderAdminConsole]);
     this.router.get("/add-blog", [this.requiresLogin, this.renderAddBlogPage]);
+    this.router.get("/add-event", [
+      this.requiresLogin,
+      this.renderAddEventPage
+    ]);
     this.router.post("/add-blog", [
       this.createImageDirectory.bind(this),
       this.handleImages().any(),
       this.addBlog.bind(this)
+    ]);
+    this.router.post("/add-event", [
+      this.setEventDirectory.bind(this),
+      this.handleImages().any(),
+      this.addEvent.bind(this)
     ]);
   }
 
@@ -46,18 +56,23 @@ class AdminRouter {
   renderAddBlogPage(req, res) {
     res.render("add-blog.ejs");
   }
+  renderAddEventPage(req, res) {
+    res.render("add-event.ejs");
+  }
 
   /**
    * Middlewares
    */
   createImageDirectory(req, res, next) {
-    const directoryFor =
-      req.url === "/add-event" ? "event-images" : "blog-images";
-
-    helpers.createDirectory(`./static/images/${directoryFor}/`, directory => {
+    helpers.createDirectory("./static/images/blog-images/", directory => {
       req.session.directory = directory;
       next();
     });
+  }
+
+  setEventDirectory(req, res, next) {
+    req.session.directory = "./static/images/event-images/";
+    next();
   }
 
   handleImages(req, res) {
@@ -109,6 +124,17 @@ class AdminRouter {
       .slice(0, -1);
 
     Blog.createNewAndAddToBlogList(req).catch(e => {
+      logger.log("Error: Can NOT save blog. createNewAndAddToBlogList ", e);
+      console.log(e);
+    });
+
+    // clear off image names from session
+    req.session.filename = false;
+    res.status(204).send();
+  }
+
+  addEvent(req, res) {
+    Event.createNewEvent(req).catch(e => {
       logger.log("Error: Can NOT save blog. createNewAndAddToBlogList ", e);
       console.log(e);
     });

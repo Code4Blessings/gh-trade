@@ -19,7 +19,7 @@ const home = props => {
       </Head>
       <Navbar />
       <Banner />
-      <EventSlider />
+      <EventSlider events={props.events} />
       <BlogSlider blogs={props.blogs} />
       <ContactUsWidget />
       <Footer />
@@ -28,11 +28,14 @@ const home = props => {
 };
 
 home.getInitialProps = async () => {
-  let _blogs = await fetch(`${basePath}/iso/fetch/homepage/initial`);
+  let _blogs = await fetch(`${basePath}/iso/fetch/homepage/initial/blogs`);
+  let _events = await fetch(`${basePath}/iso/fetch/homepage/initial/events`);
   _blogs = await _blogs.json();
+  _events = await _events.json();
 
   return {
-    blogs: _blogs.length ? _blogs : []
+    blogs: _blogs.length ? _blogs : [],
+    events: _events.length ? _events : []
   };
 };
 

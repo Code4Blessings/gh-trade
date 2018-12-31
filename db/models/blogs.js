@@ -1,7 +1,6 @@
 "use strict";
 
 const mongoose = require("mongoose");
-const logger = require("../../logger");
 const BlogList = require("./blogList");
 
 const BlogSchema = new mongoose.Schema({
@@ -50,7 +49,6 @@ BlogSchema.statics.createNewAndAddToBlogList = async function(request) {
       src: "",
       alt: "",
       title: "",
-      link: "",
       imageCount: 0,
       attributeCount: 0,
       pushToHtml() {
