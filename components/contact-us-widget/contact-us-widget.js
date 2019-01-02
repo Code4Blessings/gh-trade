@@ -3,8 +3,11 @@ import Link from "next/link";
 import "../../public/styles/Main.scss";
 
 const becomeMemberWidget = props => {
+  const cssClass = props.alignBody
+    ? "become-member-widget"
+    : "become-member-widget align-body";
   return (
-    <section className="become-member-widget align-body">
+    <section className={cssClass}>
       <h1>Bize Ulasin</h1>
       <form>
         <div className="become-member-widget-flex-cell">

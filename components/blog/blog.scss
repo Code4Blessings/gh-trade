@@ -2,60 +2,83 @@
   padding: 5vh 0 3vh;
   @include desktopSmall {
     padding: 11vh 0 5vh;
-  }
-  h1 {
-    text-transform: uppercase;
-    line-height: calculateRem(29px);
+    display: flex;
+    justify-content: space-between;
   }
 
-  h2 {
-    font-size: $font-size-xlarge;
-    line-height: $font-size-mega;
+  &__sidebar {
+    @include desktopSmall {
+      width: 33%;
+    }
+    @include desktopMedium {
+      width: 30%;
+    }
   }
 
-  img {
-    width: 100%;
-    margin: 10px 0;
-  }
+  &__blog {
+    @include desktopSmall {
+      width: 62%;
+    }
+    @include desktopMedium {
+      width: 65%;
+    }
 
-  .red-link {
-    display: inline-block;
-    width: auto !important;
-  }
+    h1 {
+      text-transform: uppercase;
+      line-height: calculateRem(29px);
+    }
 
-  .date {
-    @include calender();
-  }
+    h2 {
+      font-size: $font-size-xlarge;
+      line-height: $font-size-mega;
+    }
 
-  .author {
-    @include author();
-    margin-top: 6px;
-  }
+    img {
+      width: 100%;
+      margin: 10px 0;
+    }
 
-  pre {
-    line-height: calculateRem(26px);
-    font-family: $font-family-body;
+    .red-link {
+      width: auto !important;
+      background-position: 20px center;
+      padding-right: 0;
+      display: block;
+      @include desktopSmall {
+        padding-right: 40px;
+        display: inline-block;
+      }
+    }
+
+    .date {
+      @include calender();
+    }
+
+    .author {
+      @include author();
+      margin-top: 6px;
+    }
+
     pre {
-      margin-bottom: 0;
-      // @include desktopSmall {
-      //   line-height: calculateRem(27px);
-      //   font-size: calculateRem(16px);
-      // }
-    }
+      line-height: calculateRem(26px);
+      font-family: $font-family-body;
+      pre {
+        margin-bottom: 0;
+      }
 
-    a {
-      color: $color-red;
-      text-decoration: underline;
-      font-weight: 900;
-    }
+      a {
+        color: $color-red;
+        text-decoration: underline;
+        font-weight: 900;
+      }
 
-    ul {
-      padding: 0;
-      list-style-position: inside;
-      list-style: none;
-      li {
-        margin-bottom: 8px;
-        @include redTick();
+      ul {
+        padding: 0;
+        list-style-position: inside;
+        list-style: none;
+        li {
+          margin-bottom: 8px;
+          @include redTick();
+        }
       }
     }
   }

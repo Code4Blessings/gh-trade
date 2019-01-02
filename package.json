@@ -57,6 +57,7 @@
     "react-dom": "16.5.2",
     "react-google-invisible-recaptcha": "0.2.11",
     "react-responsive-picture": "^3.1.0",
+    "react-share": "^2.4.0",
     "sass-loader": "7.1.0",
     "winston": "2.4.2"
   }

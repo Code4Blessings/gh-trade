@@ -47,10 +47,15 @@
 @mixin hoverGray() {
   @include desktopSmall {
     transition: 0.2s;
-    padding: 5px 5px 18px;
+    padding: 5px 10px 25px;
     &:hover {
-      background: #dbdbdb;
+      background-color: $color-light-gray;
     }
+  }
+
+  @include desktopMedium {
+    padding-left: 16px;
+    padding-right: 16px;
   }
 }
 

@@ -9,6 +9,7 @@
       }
     }
   }
+
   h1 {
     padding-top: 45px;
     @include desktopSmall {
@@ -21,6 +22,19 @@
     background-position: 230px 20px;
     @include desktopSmall {
       background-position: 280px 27px;
+    }
+  }
+}
+
+// override for sidebar events
+.side-bar-events {
+  .eventslider__frame {
+    flex-direction: column;
+    @include desktopSmall {
+      max-width: 430px;
+      .event-thumbnail {
+        width: 100%;
+      }
     }
   }
 }

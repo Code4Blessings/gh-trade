@@ -15,7 +15,7 @@ const blog = props => {
         <meta name="description" content="Emekliyim mutluyum aciklamasi" />
       </Head>
       <Navbar />
-      <DisplayBlog blog={props.blog} />
+      <DisplayBlog blog={props.blog} events={props.events} />
       <Footer />
     </section>
   );
@@ -23,10 +23,13 @@ const blog = props => {
 
 blog.getInitialProps = async ({ query }) => {
   let _blog = await fetch(`${basePath}/iso/fetch/blog/${query.id}`);
+  let _events = await fetch(`${basePath}/iso/fetch/homepage/initial/events`); // side bar events
   _blog = await _blog.json();
+  _events = await _events.json();
 
   return {
-    blog: _blog
+    blog: _blog,
+    events: _events.length ? _events : []
   };
 };
 

@@ -1,0 +1,30 @@
+.suggest-blog {
+  background-color: $color-light-gray;
+  padding: 20px 3%;
+  margin: 20px auto 50px;
+  p {
+    line-height: calculateRem(22px);
+  }
+
+  form {
+    label {
+      margin-bottom: 5px;
+      color: $color-red;
+    }
+    input {
+      margin-bottom: 15px;
+    }
+    textarea {
+      margin-bottom: 15px;
+      height: 200px;
+      padding: 5px;
+      @include desktopSmall {
+        height: 300px;
+      }
+    }
+
+    button {
+      background-image: none;
+    }
+  }
+}

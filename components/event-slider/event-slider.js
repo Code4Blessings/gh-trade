@@ -4,9 +4,14 @@ import ThumbnailEvent from "../event-thumbnail/event-thumbnail";
 import "../../public/styles/Main.scss";
 
 const eventSlider = props => {
+  const cssClass = props.forSideBar
+    ? "eventslider side-bar-events"
+    : "eventslider align-body";
   return (
-    <section className="eventslider align-body">
-      <h1>{props.eventPage ? "Etkinlikler" : "Yakında olan etkinlikler"}</h1>
+    <section className={cssClass}>
+      {!props.forSideBar && (
+        <h1>{props.eventPage ? "Etkinlikler" : "Yakında olan etkinlikler"}</h1>
+      )}
       <div className="eventslider__frame">
         {insertThumbnailEvents(props.events)}
       </div>

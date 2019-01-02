@@ -19,7 +19,6 @@ const EventSchema = new mongoose.Schema({
   joined_members: Array,
   address: String,
   city: String,
-  votes_up: Number,
   price: String,
   max_capacity: String
 });
@@ -101,7 +100,6 @@ EventSchema.statics.createNewEvent = async function(request) {
       html: `<section>${html}</section>`,
       date: body.date,
       joined_qty: body.joined,
-      votes_up: body.votes_up,
       time: body.time,
       city: body.city,
       address: body.address,

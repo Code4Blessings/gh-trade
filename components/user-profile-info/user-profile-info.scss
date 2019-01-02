@@ -1,0 +1,28 @@
+.profile-info {
+  img {
+    display: block;
+    width: 100px;
+    margin: 10px auto;
+  }
+
+  &-phone {
+    font-weight: 900;
+    background: url("/static/images/icons/smartphone.svg") no-repeat center left;
+    background-size: 29px;
+    padding: 12px 0 4px 33px;
+    margin-bottom: 7px;
+  }
+
+  &-name {
+    font-weight: 900;
+    background: url("/static/images/icons/profile.svg") no-repeat center left;
+    background-size: 25px;
+    padding: 12px 0 4px 33px;
+    margin-bottom: 2px;
+  }
+
+  &-noactivity {
+    margin: 25px 0;
+    text-align: center;
+  }
+}

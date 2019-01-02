@@ -12,6 +12,7 @@ const enableCors = require("cors");
 const User = require("../../db/models/user");
 const logger = require("../../logger");
 const Blogs = require("../../db/models/blogs.js");
+const BlogSuggest = require("../../db/models/blogSuggest.js");
 
 class ApiRouter {
   constructor(router) {
@@ -30,11 +31,41 @@ class ApiRouter {
       "/fetch/blogs/load-more",
       this.fetchLoadMoreBlogs.bind(this)
     );
+    this.router.post("/user/blog/suggest", this.userBlogSuggest.bind(this));
   }
 
   /**
    * Handlers
    */
+  async userBlogSuggest(req, res) {
+    try {
+      // save suggested blog to db
+      const suggestedBlogCreated = await BlogSuggest.createNew(req.body);
+      // save suggested blog to user's record
+      User.saveSuggestedBlog(
+        suggestedBlogCreated._id,
+        req.body,
+        (e, result) => {
+          if (e || !result) {
+            console.log(e);
+            logger.log(
+              "Error: Api > saving blogs suggession to user record db save method userBlogSuggest()",
+              e
+            );
+            res.json({});
+          } else {
+            res.json(result);
+          }
+        }
+      );
+    } catch (e) {
+      console.log(e);
+      logger.log(
+        "Error: Api > Creating blogs suggession db save method query userBlogSuggest()",
+        e
+      );
+    }
+  }
 
   userLogout(req, res) {
     if (req.session) {
