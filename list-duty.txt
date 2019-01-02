@@ -1,7 +1,7 @@
 
-- add admin enquires
 - add admin blog suggestions (profile page users should be able suggest)
 - add admin event suggestions (profile page users should be able suggest)
+- add admin enquires
 - add admin console view events sold and who paid
 
 - implement user profile page, suggest event

@@ -2,6 +2,28 @@
   background-color: $color-light-gray;
   padding: 20px 3%;
   margin: 20px auto 50px;
+  position: relative;
+
+  .loader {
+    position: absolute;
+    bottom: 210px;
+    width: 100px;
+    position: absolute;
+    left: 50%;
+    margin-left: -50px;
+  }
+
+  .success-msg {
+    position: absolute;
+    bottom: 210px;
+    font-size: $font-size-mega;
+    color: $color-red;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    text-align: center;
+  }
+
   p {
     line-height: calculateRem(22px);
   }

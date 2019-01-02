@@ -3,7 +3,6 @@ import Link from "next/link";
 import Router from "next/router";
 import "../../public/styles/Main.scss";
 import SuggestBlog from "../suggest-blog/suggest-blog.js";
-import SuggestEvent from "../suggest-event/suggest-event.js";
 import UserProfileInfo from "../user-profile-info/user-profile-info.js";
 import ContactUsWidget from "../contact-us-widget/contact-us-widget.js";
 
@@ -29,6 +28,7 @@ class userProfile extends Component {
                 this.state.userData ? this.state.userData : this.props.userData
               }
             />
+            <br />
             <a className="red-link" onClick={this.logout}>
               Oturumu Kapat
             </a>
@@ -38,7 +38,6 @@ class userProfile extends Component {
               userData={this.props.userData}
               reRender={this.reRenderFunc}
             />
-            <SuggestEvent />
             <ContactUsWidget alignBody={true} />
           </div>
         </div>

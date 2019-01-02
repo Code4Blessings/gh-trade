@@ -19,7 +19,7 @@ const EventSchema = new mongoose.Schema({
   joined_members: Array,
   address: String,
   city: String,
-  price: String,
+  price: Number,
   max_capacity: String
 });
 

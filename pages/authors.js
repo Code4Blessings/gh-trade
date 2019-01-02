@@ -29,7 +29,7 @@ authors.getInitialProps = async () => {
   let _auhors = await fetch(`${basePath}/iso/fetch/authors-list`);
   _auhors = await _auhors.json();
   return {
-    authors: _auhors[0].blog
+    authors: _auhors[0] && _auhors[0].blog ? _auhors[0].blog : []
   };
 };
 

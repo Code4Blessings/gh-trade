@@ -5,7 +5,6 @@ import "../../public/styles/Main.scss";
 import SocialMediaShare from "../social-media-share/social-media-share.js";
 import EventSlider from "../event-slider/event-slider.js";
 const blog = props => {
-  console.log(props);
   return (
     <section className="blog-page align-body">
       <div className="blog-page__blog">

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Link from "next/link";
 import "../../public/styles/Main.scss";
+const loader = "/static/images/loader.gif";
 
 class SuggestBlog extends Component {
   constructor(props) {
@@ -8,7 +9,9 @@ class SuggestBlog extends Component {
     this.props = props;
     this.state = {
       title: "",
-      content: ""
+      content: "",
+      loading: false,
+      successMsg: false
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -38,6 +41,7 @@ class SuggestBlog extends Component {
               this.setState({ title: e.target.value });
             }}
             minLength="10"
+            value={this.state.title}
           />
           <textarea
             placeholder=" Makale..."
@@ -45,19 +49,45 @@ class SuggestBlog extends Component {
               this.setState({ content: e.target.value });
             }}
             minLength="2000"
+            value={this.state.content}
           />
           <button type="submit">Makaleyi Postala</button>
         </form>
+        {this.state.loading && <img src={loader} className="loader" />}
+        {this.state.successMsg && (
+          <h4 className="success-msg">Tebrikler, makaleniz eklendi</h4>
+        )}
       </section>
     );
   }
 
   async handleSubmit(e) {
     e.preventDefault();
+    const form = e.target;
     const content = this.state.content;
     const title = this.state.title;
     const member = this.props.userData;
     if (content.length && title.length) {
+      form.style.visibility = "hidden";
+      // show loader, clear up input values
+      this.setState({
+        loading: true,
+        content: "",
+        title: ""
+      });
+      // set timer to remove loader
+      setTimeout(() => {
+        // remove loader
+        this.setState({ loading: false });
+        // insert succes message
+        this.setState({ successMsg: true });
+        setTimeout(() => {
+          //remove succes message
+          this.setState({ successMsg: false });
+          //insert new form
+          form.style.visibility = "visible";
+        }, 8000);
+      }, 2500);
       const body = {
         title,
         content,
