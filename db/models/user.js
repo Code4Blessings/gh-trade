@@ -50,27 +50,6 @@ userSchema.statics.createNew = function(reqBody) {
   return newUser.save();
 };
 
-/**
- * save user suggested blog to user's record (can view on profile page which blogs suggested and which blogs confirmed by admin)
- */
-userSchema.statics.saveSuggestedBlog = function(suggestedBlogID, body, cb) {
-  this.findById(body.member._id, function(e, user) {
-    if (e || !user) {
-      return cb(e, null);
-    }
-    // we create the object key with the same id so easier to find and update in future
-    user.blogs_suggested.push([
-      suggestedBlogID,
-      Date.now(),
-      body.title,
-      body.content,
-      false
-    ]);
-    user.save((e, updatedUser) => {
-      cb(e, updatedUser);
-    });
-  });
-};
 
 const User = mongoose.model("user", userSchema);
 

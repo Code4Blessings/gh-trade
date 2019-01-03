@@ -10,23 +10,6 @@
 
 // Components
 @import "../../components/navbar/navbar.scss";
-@import "../../components/banner/banner.scss";
-@import "../../components/event-slider/event-slider.scss";
-@import "../../components/event-thumbnail/event-thumbnail.scss";
-@import "../../components/blog-thumbnail/blog-thumbnail.scss";
-@import "../../components/blog-slider/blog-slider.scss";
-@import "../../components/contact-us-widget/contact-us-widget.scss";
-@import "../../components/register-form/register-form.scss";
-@import "../../components/login-and-profile/login-and-profile.scss";
-@import "../../components/authors-list/authors-list.scss";
-@import "../../components/about-us/about-us.scss";
-@import "../../components/user-profile/user-profile.scss";
-@import "../../components/blog/blog.scss";
-@import "../../components/event/event.scss";
-@import "../../components/social-media-share/social-media-share.scss";
-@import "../../components/suggest-blog/suggest-blog.scss";
-@import "../../components/user-profile-info/user-profile-info.scss";
-@import "../../components/footer/footer.scss";
 
 // Shared styles  *keep at the bottom (overides)
 @import "shared/_js-classes.scss";

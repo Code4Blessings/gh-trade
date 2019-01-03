@@ -1,5 +1,5 @@
 /**
- * Authentication routes
+ * Admin Authentication Routes
  *
  *       /auth/...
  */

@@ -13,13 +13,9 @@ class Doc extends Document {
           />
           <meta name="description" content="Ghana Auto Trader" />
           <link
-            href="https://fonts.googleapis.com/css?family=Itim"
-            rel="stylesheet"
-          />
-          <link
             rel="icon"
             type="image/x-icon"
-            href="/static/images/icons/logo-uneven.png"
+            href="/static/images/icons/logo.png"
           />
           <script src="/static/vendors/axios.js" async defer />
         </Head>

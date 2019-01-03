@@ -33,17 +33,3 @@ button {
   clear: both;
 }
 
-h1 {
-  font-family: $font-family-title;
-  font-size: $font-size-mega;
-  color: $color-red;
-  line-height: calculateRem(25px);
-  @include desktopSmall {
-    font-size: calculateRem(30px);
-    line-height: calculateRem(28px);
-  }
-  @include desktopMedium {
-    font-size: calculateRem(39px);
-    line-height: calculateRem(40px);
-  }
-}

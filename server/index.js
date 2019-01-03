@@ -14,7 +14,8 @@ const session = require("../session");
 const isomorphicRoutes = require("./routes/isomorphic.js");
 const apiRoutes = require("./routes/api.js");
 const adminRoutes = require("./routes/admin/");
-const authRoutes = require("./routes/auth.js");
+const adminAuthRoutes = require("./routes/admin/auth.js");
+const paymnetRoutes = require("./routes/payment.js");
 
 require("../db");
 
@@ -53,7 +54,7 @@ process.env.PORT = process.env.PORT || 80;
       res.locals.session = req.session;
       next();
     });
-    server.use("/auth", authRoutes);
+    server.use("/auth", adminAuthRoutes);
     server.use("/admin", adminRoutes);
     server.use("/api", apiRoutes);
     server.use("/iso", isomorphicRoutes);

@@ -3,40 +3,18 @@ import Link from "next/link";
 import Head from "next/head";
 import fetch from "isomorphic-unfetch";
 import Navbar from "../components/navbar/navbar";
-import Banner from "../components/banner/banner";
-import EventSlider from "../components/event-slider/event-slider";
-import BlogSlider from "../components/blog-slider/blog-slider";
-import ContactUsWidget from "../components/contact-us-widget/contact-us-widget";
-import Footer from "../components/footer/footer";
 import basePath from "../helpers/client/basePath.js";
 
 const home = props => {
   return (
     <section>
       <Head>
-        <title>Emekliyim Mutluyum</title>
-        <meta name="description" content="Emekliyim mutluyum aciklamasi" />
+        <title>Ghana Autotrader</title>
+        <meta name="description" content="Ghana auto trading web platform" />
       </Head>
       <Navbar />
-      <Banner />
-      <EventSlider events={props.events} />
-      <BlogSlider blogs={props.blogs} />
-      <ContactUsWidget />
-      <Footer />
     </section>
   );
-};
-
-home.getInitialProps = async () => {
-  let _blogs = await fetch(`${basePath}/iso/fetch/homepage/initial/blogs`);
-  let _events = await fetch(`${basePath}/iso/fetch/homepage/initial/events`);
-  _blogs = await _blogs.json();
-  _events = await _events.json();
-
-  return {
-    blogs: _blogs.length ? _blogs : [],
-    events: _events.length ? _events : []
-  };
 };
 
 export default home;
