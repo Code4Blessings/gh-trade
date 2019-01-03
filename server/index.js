@@ -15,7 +15,6 @@ const isomorphicRoutes = require("./routes/isomorphic.js");
 const apiRoutes = require("./routes/api.js");
 const adminRoutes = require("./routes/admin/");
 const adminAuthRoutes = require("./routes/admin/auth.js");
-const paymnetRoutes = require("./routes/payment.js");
 
 require("../db");
 

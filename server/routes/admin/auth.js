@@ -8,7 +8,7 @@
 
 const express = require("express");
 const router = express.Router();
-const User = require("../../db/models/admin");
+const User = require("../../../db/models/admin");
 
 class AuthRouter {
   constructor(router) {

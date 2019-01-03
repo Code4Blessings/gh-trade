@@ -1,0 +1,37 @@
+{
+  "extends": "airbnb",
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "ecmaFeatures": {
+      "impliedStrict": true
+    }
+  },
+  "globals": {
+    "console": true,
+    "module": true,
+    "require": true
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "commonjs": true,
+    "es6": true
+  },
+  "rules": {
+    "indent": [2, 2],                // http://eslint.org/docs/rules/indent
+    "brace-style": [2,               // http://eslint.org/docs/rules/brace-style
+      "1tbs", {
+      "allowSingleLine": true
+    }],
+    "quotes": [
+      2, "single", "avoid-escape"    // http://eslint.org/docs/rules/quotes
+    ],
+    "comma-spacing": [2, {           // http://eslint.org/docs/rules/comma-spacing
+      "before": false,
+      "after": true
+    }],
+    "comma-style": [2, "last"],      // http://eslint.org/docs/rules/comma-style
+  }
+}
+
+
