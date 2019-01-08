@@ -11,7 +11,7 @@ class Doc extends Document {
             name="viewport"
             content="width=device-width initial-scale=1 shrink-to-fit=no"
           />
-          <meta name="description" content="Ghana Auto Trader" />
+          <meta name="description" content="Akwaba Auto Trader" />
           <link
             rel="icon"
             type="image/x-icon"

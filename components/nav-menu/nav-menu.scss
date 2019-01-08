@@ -1,0 +1,99 @@
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  &__right,
+  &__left {
+    position: fixed;
+    height: 100%;
+    top: 90px;
+    width: 50%;
+    transition: 0.4s $transition;
+    @include desktopSmall {
+      position: absolute;
+      transform: translateX(0) !important;
+      background: transparent !important;
+      &-list {
+        margin-top: 25px !important;
+        margin-left: 0 !important;
+        &-item {
+          color: white !important;
+          background: none !important;
+        }
+      }
+    }
+    &-list {
+      margin-top: 7vh;
+      margin-left: 3vw;
+      &-item {
+        display: block;
+        font-size: $font-size-xlarge;
+        margin: 15px 0 15px 0;
+        padding: 7px 0 7px 30px;
+        font-family: $font-family-title;
+      }
+    }
+  }
+
+  &__right {
+    background: $color-navy;
+    right: 0;
+    transform: translateX(200%);
+    @include desktopSmall {
+      top: 0;
+      right: 10%;
+      width: auto !important;
+      &-list {
+        .contact-us,
+        .yellow,
+        .red {
+          font-weight: 900;
+          font-size: $font-size-large;
+        }
+        .contact-us {
+          color: #09a935 !important;
+        }
+        .yellow {
+          color: $color-yellow !important;
+        }
+        .red {
+          color: $color-red !important;
+        }
+        &-item {
+          display: inline !important;
+        }
+      }
+    }
+    &-list {
+      &-item {
+        color: $color-light-gray;
+        @include backgroundIcon("right-arrow-gray.svg", 16px, 6px 10px);
+      }
+    }
+  }
+
+  &__left {
+    background: $color-light-gray;
+    left: 0;
+    transform: translateX(-100%);
+    @include desktopSmall {
+      width: auto !important;
+      top: 0;
+      left: 25%;
+      &-list {
+        .search {
+          display: none !important;
+        }
+        &-item {
+          display: inline !important;
+        }
+      }
+    }
+    &-list {
+      &-item {
+        color: $color-navy;
+        @include backgroundIcon("right-arrow-navy.svg", 16px, 6px 10px);
+      }
+    }
+  }
+}

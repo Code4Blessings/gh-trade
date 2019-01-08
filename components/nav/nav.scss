@@ -1,0 +1,28 @@
+.nav {
+  background: $color-navy;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  height: 90px;
+  @include desktopSmall {
+    height: 70px;
+  }
+  &__logo {
+    width: 50%;
+    background: $color-light-gray;
+    @include desktopSmall {
+      width: 20%;
+    }
+    a {
+      img {
+        display: block;
+        margin: 9px auto 0;
+        width: 80px;
+        @include desktopSmall {
+          width: 70px;
+          margin-top: 4px;
+        }
+      }
+    }
+  }
+}

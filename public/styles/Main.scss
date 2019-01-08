@@ -9,7 +9,9 @@
 @import "shared/_index.scss";
 
 // Components
-@import "../../components/navbar/navbar.scss";
+@import "../../components/nav/nav.scss";
+@import "../../components/burger/burger.scss";
+@import "../../components/nav-menu/nav-menu.scss";
 
 // Shared styles  *keep at the bottom (overides)
 @import "shared/_js-classes.scss";

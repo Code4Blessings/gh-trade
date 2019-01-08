@@ -2,17 +2,21 @@ import React, { Component } from "react";
 import Link from "next/link";
 import Head from "next/head";
 import fetch from "isomorphic-unfetch";
-import Navbar from "../components/navbar/navbar";
 import basePath from "../helpers/client/basePath.js";
+
+// components
+import Nav from "../components/nav/nav";
+import NavMenu from "../components/nav-menu/nav-menu";
 
 const home = props => {
   return (
     <section>
       <Head>
-        <title>Ghana Autotrader</title>
+        <title>Akwaba Autotrader</title>
         <meta name="description" content="Ghana auto trading web platform" />
       </Head>
-      <Navbar />
+      <Nav />
+      <NavMenu />
     </section>
   );
 };
