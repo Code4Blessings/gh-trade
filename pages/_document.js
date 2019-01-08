@@ -18,7 +18,7 @@ class Doc extends Document {
             href="/static/images/icons/logo.png"
           />
           <link
-            href="https://fonts.googleapis.com/css?family=Mukta"
+            href="https://fonts.googleapis.com/css?family=Roboto+Condensed"
             rel="stylesheet"
           />
           <script src="/static/vendors/axios.js" async defer />

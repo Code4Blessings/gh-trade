@@ -18,7 +18,6 @@
         margin-left: 0 !important;
         &-item {
           color: white !important;
-          background: none !important;
         }
       }
     }
@@ -61,13 +60,14 @@
         }
         &-item {
           display: inline !important;
+          background: none !important;
         }
       }
     }
     &-list {
       &-item {
         color: $color-light-gray;
-        @include backgroundIcon("right-arrow-gray.svg", 16px, 6px 10px);
+        @include backgroundIcon("right-arrow-gray.svg", 15px, 6px 10px);
       }
     }
   }
@@ -80,19 +80,25 @@
       width: auto !important;
       top: 0;
       left: 25%;
+      width: 80% !important;
       &-list {
         .search {
           display: none !important;
         }
         &-item {
+          padding-left: 22px;
+          margin-left: 4%;
           display: inline !important;
+          background: url("/static/images/icons/right-arrow-gray.svg") no-repeat
+            center left !important;
+          background-size: 16px !important;
         }
       }
     }
     &-list {
       &-item {
         color: $color-navy;
-        @include backgroundIcon("right-arrow-navy.svg", 16px, 6px 10px);
+        @include backgroundIcon("right-arrow-navy.svg", 15px, 6px 10px);
       }
     }
   }

@@ -1,0 +1,19 @@
+.banner {
+  height: 380px;
+  background: url("/static/images/banner-small.jpg") no-repeat center;
+  background-size: cover;
+  @include desktopSmall {
+    background-image: url("/static/images/banner-medium.jpg");
+  }
+  @include desktopLarge {
+    height: 400px;
+    background-image: url("/static/images/banner-large.jpg");
+  }
+
+  &-gap {
+    height: 15px;
+    @include desktopLarge {
+      height: 26px;
+    }
+  }
+}

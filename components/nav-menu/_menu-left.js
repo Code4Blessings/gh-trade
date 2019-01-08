@@ -13,9 +13,6 @@ export default () => {
           <a className="menu__left-list-item">Sell your car</a>
         </Link>
         <Link href="#">
-          <a className="menu__left-list-item">View cars</a>
-        </Link>
-        <Link href="#">
           <a className="menu__left-list-item search">Search</a>
         </Link>
       </div>

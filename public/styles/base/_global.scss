@@ -6,6 +6,7 @@
 body {
   width: 100%;
   overflow-x: hidden;
+  color: $color-navy;
   font-family: $font-family-body;
   position: relative;
   @include limitWidthDektop();
@@ -24,6 +25,7 @@ pre {
 
 button {
   cursor: pointer;
+  font-family: $font-family-title;
 }
 
 .clearfix:after {
@@ -32,4 +34,10 @@ button {
   display: block;
   height: 0;
   clear: both;
+}
+
+h1,
+h2,
+h3 {
+  font-family: $font-family-title;
 }

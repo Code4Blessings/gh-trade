@@ -17,6 +17,12 @@
   background-position: $position;
 }
 
+@mixin moreOptions($size) {
+  background: url("/static/images/icons/more-options-red.svg") no-repeat center
+    left;
+  background-size: $size;
+}
+
 @mixin limitWidthDektop() {
   @include desktopSmall {
     max-width: 1400px;

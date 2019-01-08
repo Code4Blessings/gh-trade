@@ -7,6 +7,7 @@ import basePath from "../helpers/client/basePath.js";
 // components
 import Nav from "../components/nav/nav";
 import NavMenu from "../components/nav-menu/nav-menu";
+import Banner from "../components/banner/banner.js";
 
 const home = props => {
   return (
@@ -17,6 +18,7 @@ const home = props => {
       </Head>
       <Nav />
       <NavMenu />
+      <Banner />
     </section>
   );
 };

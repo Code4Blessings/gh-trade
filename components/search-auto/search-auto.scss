@@ -1,0 +1,54 @@
+.search-auto {
+  width: 68%;
+  background: rgba(246, 246, 246, 0.9);
+  border-radius: 4px;
+  margin-left: 3%;
+  max-width: 400px;
+  h2 {
+    margin-top: 0;
+    padding-top: 26px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  form {
+    * {
+      display: block;
+    }
+    width: 90%;
+    margin: 0 auto;
+    max-width: 300px;
+    select {
+      border-radius: 4px;
+      background: #dbdbd2;
+      color: $color-navy;
+      font-size: $font-size-medium;
+      height: 38px;
+      width: 100%;
+      border: none;
+      margin-bottom: 5px;
+      text-indent: 8px;
+      option {
+        color: $color-navy;
+      }
+    }
+
+    button {
+      background: #ff4436;
+      border: none;
+      width: 150px;
+      margin: 13px auto;
+      font-weight: 900;
+      padding: 12px 0;
+      color: white;
+      border-radius: 60px;
+    }
+
+    a.search-more {
+      color: $color-red;
+      text-decoration: underline;
+      padding: 14px 0 16px 26px;
+      font-size: $font-size-medium;
+      @include moreOptions(21px);
+    }
+  }
+}
