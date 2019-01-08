@@ -1,19 +1,12 @@
-// Hi Robin
-
-/***
-*
-* Here variables
-*  just like javascript, these are sass variables
-* you can use them in your sass files
-*/
-
 // Colors
-$color-dark-navy: #313c53;
-$color-light-gray: rgb(245, 247, 248);
+$color-dark-navy: #002937;
+$color-light-gray: #f5f7f8;
+$color-green: #00cea5;
+$color-red: #ff4436;
 
 // Typography
 $font-family-body: "Arial", sans-serif;
-// $font-family-title: "Itim", cursive;
+$font-family-title: "Mukta", sans-serif;
 
 $font-size-tiny: calculateRem(10.3px);
 $font-size-small: calculateRem(12px);

@@ -1,0 +1,68 @@
+.navbar {
+  background: $color-dark-navy;
+  color: white;
+  display: flex;
+  &__logo {
+    background: $color-light-gray;
+    a {
+      img {
+        width: 85px;
+      }
+    }
+  }
+
+  &__navigation {
+    &-icon {
+      &-item {
+      }
+    }
+  }
+
+  &__burger {
+    #burger-icon {
+      margin: 0 1rem;
+      display: block;
+      height: 3rem;
+      width: 3rem;
+      background-color: #006b3f;
+      border-radius: 50%;
+      position: relative;
+      -webkit-box-shadow: 1px 1px 15px 0 rgba(0, 0, 0, 0.5);
+      -moz-box-shadow: 1px 1px 15px 0 rgba(0, 0, 0, 0.5);
+      box-shadow: 1px 1px 15px 0 rgba(0, 0, 0, 0.5);
+    }
+    #burger-icon span,
+    #burger-icon span:after,
+    #burger-icon span:before {
+      position: absolute;
+      top: 50%;
+      margin: -1px 0 0 -10px;
+      left: 50%;
+      width: 20px;
+      height: 2px;
+      background: #fcd116;
+      transition: 0.3s;
+    }
+    #burger-icon span:after,
+    #burger-icon span:before {
+      content: "";
+      display: block;
+    }
+    #burger-icon span:after {
+      transform: translateY(-5px);
+    }
+    #burger-icon span:before {
+      transform: translateY(5px);
+    }
+
+    .icon-btn-active span {
+      transform: rotate(270deg);
+    }
+    .icon-btn-active span:before {
+      transform: rotate(0deg) translateY(0px);
+    }
+    .icon-btn-active span:after {
+      transform: rotate(0deg) translateY(0px);
+    }
+  }
+}

@@ -17,6 +17,10 @@ class Doc extends Document {
             type="image/x-icon"
             href="/static/images/icons/logo.png"
           />
+          <link
+            href="https://fonts.googleapis.com/css?family=Mukta"
+            rel="stylesheet"
+          />
           <script src="/static/vendors/axios.js" async defer />
         </Head>
         <body>
