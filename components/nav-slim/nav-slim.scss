@@ -1,0 +1,24 @@
+.nav-slim {
+  display: none;
+  @include desktopSmall {
+    display: block;
+    position: absolute;
+    color: white;
+    top: 8px;
+    right: 33%;
+    a {
+      font-size: $font-size-small;
+      display: inline-block;
+      padding: 5px 24px 5px 23px;
+    }
+    a.van {
+      @include backgroundIcon("van-white.svg", 20px, 2px left);
+    }
+    a.truck {
+      @include backgroundIcon("truck-white.svg", 22px, 2px left);
+    }
+    a.bike {
+      @include backgroundIcon("bike-white.svg", 20px, 2px left);
+    }
+  }
+}

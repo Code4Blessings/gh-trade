@@ -5,7 +5,7 @@ import "../../public/styles/Main.scss";
 export default () => {
   return (
     <section className="search-auto">
-      <h2>New & Used cars</h2>
+      <h2>Search new & used cars</h2>
       <form>
         <select>
           <option value="">Select Town</option>
@@ -34,7 +34,7 @@ export default () => {
           <option>To 30000</option>
           <option>To 50000</option>
         </select>
-        <button>Search</button>
+        <button className="red-button">Search</button>
         <Link href="#">
           <a className="search-more">More search options</a>
         </Link>

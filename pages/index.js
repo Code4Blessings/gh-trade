@@ -8,6 +8,9 @@ import basePath from "../helpers/client/basePath.js";
 import Nav from "../components/nav/nav";
 import NavMenu from "../components/nav-menu/nav-menu";
 import Banner from "../components/banner/banner.js";
+import NavbarSlim from "../components/nav-slim/nav-slim.js";
+import CarTypes from "../components/car-types/car-types.js";
+import SellYourCarWidget from "../components/sell-your-car/sell-your-car.js";
 
 const home = props => {
   return (
@@ -18,7 +21,10 @@ const home = props => {
       </Head>
       <Nav />
       <NavMenu />
+      <NavbarSlim />
       <Banner />
+      <SellYourCarWidget />
+      <CarTypes />
     </section>
   );
 };

@@ -1,0 +1,40 @@
+.car-types {
+  margin-top: 20px;
+  h1 {
+    text-align: center;
+  }
+  &__frame {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    a {
+      display: block;
+      width: 44%;
+      margin: 5px 0;
+      @include desktopSmall {
+        margin: 10px 0;
+        width: 20.33%;
+        &:hover > img {
+          transform: translateX(-4px);
+        }
+      }
+      img {
+        transform: translateX(4px);
+        transition: 0.3s $transition;
+        display: block;
+        width: 150px;
+        margin: 0 auto;
+        @include desktopSmall {
+          width: 220px;
+        }
+      }
+      h5 {
+        text-align: center;
+        margin-top: 0;
+        font-weight: 100;
+        font-size: $font-size-xlarge;
+        font-family: $font-family-title;
+      }
+    }
+  }
+}

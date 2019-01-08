@@ -33,14 +33,9 @@
     }
 
     button {
-      background: #ff4436;
-      border: none;
       width: 150px;
       margin: 13px auto;
-      font-weight: 900;
-      padding: 12px 0;
-      color: white;
-      border-radius: 60px;
+      @include backgroundIcon("magnifier-white.svg", 20px, 15px center);
     }
 
     a.search-more {

@@ -10,10 +10,10 @@ export default () => {
           <a className="menu__right-list-item yellow">Sign in</a>
         </Link>
         <Link href="#">
-          <a className="menu__right-list-item red">Register</a>
+          <a className="menu__right-list-item green">Register</a>
         </Link>
         <Link href="#">
-          <a className="menu__right-list-item contact-us">Contact us</a>
+          <a className="advert red-button">Create your add</a>
         </Link>
       </div>
     </section>
