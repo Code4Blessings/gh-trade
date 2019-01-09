@@ -18,7 +18,11 @@ const userSchema = new schema({
   },
   phone: String,
   posts: Array, // array of object
-  posts_allowed: 1, // can post one free advert each month
+  posts_allowed: {
+    // can post one free advert each month
+    type: Number,
+    default: 1
+  },
   joined_date: {
     type: Date,
     default: Date.now

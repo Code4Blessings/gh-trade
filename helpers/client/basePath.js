@@ -6,7 +6,7 @@ const basePath = (function() {
     process.env.NODE_ENV === "development"
       ? "http://localhost:3000"
       : "http://localhost:3000"; // On deployment replace with the domain
-  // : "https://emekliyim-mutluyum.com";
+  // : "https://ghana-auto-trade.com";
   return base_path;
 })();
 

@@ -21,11 +21,22 @@ class Doc extends Document {
             href="https://fonts.googleapis.com/css?family=Roboto+Condensed"
             rel="stylesheet"
           />
-          <script src="/static/vendors/axios.js" async defer />
+          <script
+            type="text/javascript"
+            src="/static/vendors/axios.js"
+            async
+            defer
+          />
         </Head>
         <body>
           <Main />
           <NextScript />
+          <script
+            type="text/javascript"
+            src="https://www.google.com/recaptcha/api.js"
+            async
+            defer
+          />
         </body>
       </html>
     );

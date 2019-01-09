@@ -6,7 +6,7 @@ export default () => {
   return (
     <section className="user-register-form">
       <h2>Login</h2>
-      <form className="default-form">
+      <form className="default-form" onSubmit={handleSubmit}>
         <label for="email">Email</label>
         <input type="email" placeholder=" @" id="email" />
         <label for="password">Password</label>
@@ -16,3 +16,7 @@ export default () => {
     </section>
   );
 };
+
+function handleSubmit(e) {
+  e.preventDefault();
+}
