@@ -12,7 +12,7 @@ export default () => {
         <Link href="/user/register">
           <a className="menu__left-list-item sell-car">Sell your car</a>
         </Link>
-        <Link href="#">
+        <Link href="/search/detailed">
           <a className="menu__left-list-item search">Search</a>
         </Link>
       </div>

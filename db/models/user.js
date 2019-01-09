@@ -6,7 +6,7 @@ const schema = mongoose.Schema;
 
 const userSchema = new schema({
   name: String,
-  phone: {
+  email: {
     type: String,
     unique: true,
     required: true,
@@ -16,10 +16,18 @@ const userSchema = new schema({
     type: String,
     required: true
   },
-  events_joined: Array, //[urlString1, urlString2, ...]
-  blogs_suggested: Array // [[id, date, title, content, status], [id, date, title, content, status], ...]
+  phone: String,
+  posts: Array, // array of object
+  posts_allowed: 1, // can post one free advert each month
+  joined_date: {
+    type: Date,
+    default: Date.now
+  }
 });
 
+/**
+ *  Auth methods
+ */
 userSchema.methods.hashPassword = function(password) {
   return bcrypt.hashSync(password, bcrypt.genSaltSync(3));
 };
@@ -40,7 +48,6 @@ userSchema.statics.authenticate = function(phone, password, cb) {
     return cb(null);
   });
 };
-
 userSchema.statics.createNew = function(reqBody) {
   const newUser = new User({
     name: reqBody.name,
@@ -49,7 +56,6 @@ userSchema.statics.createNew = function(reqBody) {
   newUser.password = newUser.hashPassword(reqBody.password);
   return newUser.save();
 };
-
 
 const User = mongoose.model("user", userSchema);
 
