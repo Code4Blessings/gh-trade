@@ -6,7 +6,7 @@
     display: flex;
     justify-content: space-between;
     border: 5px solid #dbf6d4;
-    height: 450px;
+    height: auto;
     border-radius: 5px;
   }
   &__left {
@@ -29,29 +29,6 @@
         text-align: left;
       }
     }
-    form {
-      width: 200px;
-      margin: 0 auto;
-      @include desktopSmall {
-        margin-left: 10%;
-      }
-      * {
-        display: block;
-      }
-      label {
-        padding: 14px 0 2px;
-      }
-      input {
-        width: 100%;
-        height: 40px;
-        border-radius: 5px;
-        border: solid 2px #e8e8e3;
-      }
-      button {
-        width: 150px;
-        margin-top: 13px;
-      }
-    }
   }
 
   &__right {
@@ -63,7 +40,8 @@
         right center;
       background-size: 100%;
       img {
-        width: 64%;
+        width: 600px;
+        transform: translateX(-110px);
         margin-top: 150px;
       }
     }

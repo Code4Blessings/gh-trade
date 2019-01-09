@@ -9,16 +9,24 @@
     a {
       font-size: $font-size-small;
       display: inline-block;
-      padding: 5px 24px 5px 23px;
+      padding: 3px 5px 3px 23px;
+      text-align: right;
+      width: 68px;
+      border: 1px solid white;
+      border-radius: 3px;
+      margin-left: 10px;
+      &:hover {
+        border: 1px solid $color-red;
+      }
     }
     a.van {
-      @include backgroundIcon("van-white.svg", 20px, 2px left);
+      @include backgroundIcon("van-white.svg", 20px, 5px center);
     }
     a.truck {
-      @include backgroundIcon("truck-white.svg", 22px, 2px left);
+      @include backgroundIcon("truck-white.svg", 22px, 5px center);
     }
     a.bike {
-      @include backgroundIcon("bike-white.svg", 20px, 2px left);
+      @include backgroundIcon("bike-white.svg", 20px, 5px 0);
     }
   }
 }

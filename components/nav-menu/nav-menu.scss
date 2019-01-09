@@ -97,13 +97,22 @@
           display: none !important;
         }
         &-item {
-          font-size: $font-size-xxlarge;
-          padding-left: 20px;
-          margin-left: 4%;
+          font-size: $font-size-xlarge;
+          margin-left: 2%;
           display: inline !important;
-          background: url("/static/images/icons/right-arrow-gray.svg") no-repeat
-            center left !important;
-          background-size: 16px !important;
+        }
+        .buy-car {
+          padding-left: 28px;
+          background: url("/static/images/icons/buy-car.svg") no-repeat center
+            left !important;
+          background-size: 25px !important;
+        }
+        .sell-car {
+          padding-left: 22px;
+          padding-top: 8px;
+          background: url("/static/images/icons/sell-car.svg") no-repeat center
+            left !important;
+          background-size: 21px !important;
         }
       }
     }

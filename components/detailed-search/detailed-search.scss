@@ -1,0 +1,38 @@
+.detailed-search {
+  @include limitWidthMobile();
+  @include desktopSmall {
+    background: url("/static/images/car-search.jpeg") no-repeat center;
+    background-size: cover;
+  }
+  h2 {
+    margin-top: 0;
+    padding-top: 50px;
+  }
+  p {
+  }
+  form {
+    max-width: 470px;
+    @include tablet {
+      margin-left: 10%;
+    }
+    @include desktopSmall {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    select {
+      width: 48%;
+      margin-bottom: 7px;
+      float: left;
+      margin-left: 1%;
+      @include tablet {
+        max-width: 224px;
+        margin-left: 0;
+      }
+    }
+    button {
+      width: 170px;
+      margin: 13px 0 50px;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+.user-register-form {
+  form {
+    width: 230px;
+    margin: 0 auto;
+    @include desktopSmall {
+      margin-left: 10%;
+    }
+    button {
+      width: 120px;
+      margin: 14px 0 50px;
+    }
+  }
+}

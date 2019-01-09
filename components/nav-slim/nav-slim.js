@@ -12,7 +12,7 @@ export default () => {
         <a className="bike">Bikes</a>
       </Link>
       <Link href="#">
-        <a className="truck">Trucks</a>
+        <a className="truck">Truck</a>
       </Link>
     </section>
   );

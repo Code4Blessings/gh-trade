@@ -35,7 +35,7 @@ export default () => {
           <option>To 50000</option>
         </select>
         <button className="red-button">Search</button>
-        <Link href="#">
+        <Link href="/search/detailed">
           <a className="search-more">More search options</a>
         </Link>
       </form>
