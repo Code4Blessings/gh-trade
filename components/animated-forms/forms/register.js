@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Link from "next/link";
 import Recaptcha from "react-google-invisible-recaptcha";
+// import popup from "../../helpers/client/popup.js";
 
 class RegisterForm extends Component {
   constructor(props) {
@@ -93,8 +94,7 @@ class RegisterForm extends Component {
       this.state.email &&
       this.state.password &&
       this.state.passwordRepeat;
-    const passwordMatch =
-      this.state.password.value === this.state.passwordRepeat.value;
+    const passwordMatch = this.state.password === this.state.passwordRepeat;
 
     if (!inputValues) {
       alert("Please fill required form fields");
@@ -124,7 +124,6 @@ class RegisterForm extends Component {
     }
   }
 
-  // recaptcha check
   onResolved() {
     const res = this.recaptcha.getResponse();
     if (res && res.length && typeof res === "string") {

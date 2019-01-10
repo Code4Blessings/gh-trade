@@ -5,9 +5,8 @@ import loginForm from "./forms/login.js";
 import RegisterForm from "./forms/register.js";
 import preregisterForm from "./forms/preregister.js";
 const carImg = "/static/images/cars-for-sale.png";
-// import popup from "../../helpers/client/popup.js";
 
-class AnimatedForm extends Component {
+class AnimatedForms extends Component {
   constructor(props) {
     super(props);
     this.props = props;
@@ -41,4 +40,4 @@ class AnimatedForm extends Component {
   }
 }
 
-export default AnimatedForm;
+export default AnimatedForms;

@@ -52,6 +52,7 @@ userSchema.statics.authenticate = function(phone, password, cb) {
     return cb(null);
   });
 };
+
 userSchema.statics.createNew = function(reqBody) {
   const newUser = new User({
     name: reqBody.name,
