@@ -8,8 +8,7 @@ import basePath from "../../helpers/client/basePath.js";
 import Nav from "../../components/nav/nav";
 import NavMenu from "../../components/nav-menu/nav-menu";
 import NavbarSlim from "../../components/nav-slim/nav-slim.js";
-import AnimatedForm from "../../components/animated-form/animated-form.js";
-import UserRegisterForm from "../../components/user-register-form/user-register-form.js";
+import AnimatedForms from "../../components/animated-forms/animated-forms.js";
 
 const register = props => {
   return (
@@ -21,7 +20,7 @@ const register = props => {
       <Nav />
       <NavMenu />
       <NavbarSlim />
-      <AnimatedForm formToRender={UserRegisterForm} />
+      <AnimatedForms formToRender={{ ref: "register" }} />
     </section>
   );
 };

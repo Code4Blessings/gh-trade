@@ -27,16 +27,11 @@ class Doc extends Document {
             async
             defer
           />
+          <script src="https://www.google.com/recaptcha/api.js" async defer />
         </Head>
         <body>
           <Main />
           <NextScript />
-          <script
-            type="text/javascript"
-            src="https://www.google.com/recaptcha/api.js"
-            async
-            defer
-          />
         </body>
       </html>
     );

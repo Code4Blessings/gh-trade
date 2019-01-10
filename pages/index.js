@@ -10,8 +10,7 @@ import NavMenu from "../components/nav-menu/nav-menu";
 import Banner from "../components/banner/banner.js";
 import NavbarSlim from "../components/nav-slim/nav-slim.js";
 import CarTypes from "../components/car-types/car-types.js";
-import AnimatedForm from "../components/animated-form/animated-form.js";
-import PreRegisterForm from "../components/preregister-form/preregister-form.js";
+import AnimatedForms from "../components/animated-forms/animated-forms.js";
 
 const home = props => {
   return (
@@ -24,7 +23,7 @@ const home = props => {
       <NavMenu />
       <NavbarSlim />
       <Banner />
-      <AnimatedForm formToRender={PreRegisterForm} />
+      <AnimatedForms formToRender={{ ref: "preregister" }} />
       <CarTypes />
     </section>
   );
